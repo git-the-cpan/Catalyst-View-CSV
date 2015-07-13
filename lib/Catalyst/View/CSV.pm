@@ -198,7 +198,7 @@ use strict;
 use warnings;
 
 use 5.009_005;
-our $VERSION = "1.5";
+our $VERSION = "1.6";
 
 __PACKAGE__->mk_accessors ( qw ( csv charset suffix ) );
 
@@ -225,7 +225,8 @@ sub new {
 
   # Create underlying Text::CSV object
   delete $config->{catalyst_component_name};
-  my $csv = Text::CSV->new ( $config );
+  my $csv = Text::CSV->new ( $config )
+      or die "Cannot use CSV view: ".Text::CSV->error_diag();
   $self->csv ( $csv );
 
   return $self;

@@ -4,7 +4,7 @@
       "Michael Brown <mbrown@fensystems.co.uk>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "ExtUtils::MakeMaker version 6.64, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Module::Install version 1.06, CPAN::Meta::Converter version 2.140640",
    "license" : [
       "perl_5"
    ],
@@ -15,8 +15,8 @@
    "name" : "Catalyst-View-CSV",
    "no_index" : {
       "directory" : [
-         "t",
-         "inc"
+         "inc",
+         "t"
       ]
    },
    "prereqs" : {
@@ -46,6 +46,9 @@
          }
       },
       "runtime" : {
+         "recommends" : {
+            "Text::CSV_XS" : "0"
+         },
          "requires" : {
             "Catalyst::View" : "0",
             "Text::CSV" : "0",
@@ -55,5 +58,10 @@
       }
    },
    "release_status" : "stable",
+   "resources" : {
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ]
+   },
    "version" : "1.5"
 }
